@@ -110,7 +110,7 @@ def post_forgotpwd(request):
     user.save()
 
     # 给用户发送新密码
-    mail_title = u'前端社区（F2E.im）找回密码'
+    mail_title = u'智能中国（zhongguo.ai）找回密码'
     var = {'email': user.email,  'new_password': new_password}
     mail_content = loader.get_template('user/forgot_password_mail.html').render(Context(var))
     sendmail(mail_title, mail_content, user.email)
@@ -158,7 +158,7 @@ def post_register(request):
     user = form.save()
     if user:
         # 注册成功，发送邮件到用户邮箱
-        mail_title = u'前端社区（F2E.im）注册成功通知'
+        mail_title = u'智能中国（zhongguo.ai）注册成功通知'
         mail_content = loader.get_template('user/register_mail.html').render(Context({}))
         sendmail(mail_title, mail_content, user.email)
     return redirect(settings.LOGIN_URL)

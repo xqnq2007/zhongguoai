@@ -7,7 +7,7 @@
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
     <meta name="format-detection" content="telephone=no" />
     {% load forum_extras %}
-    <title>{% block title %}F2E - 前端技术社区{% endblock %}</title>
+    <title>{% block title %}智能中国 - AI爱好者社区{% endblock %}</title>
     <script type="text/javascript" src="/static/js/base/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="/static/js/base/bootstrap.min.js"></script>
     <script type="text/javascript" src="/static/js/base/in-min.js"></script>
@@ -93,30 +93,30 @@
                 {% set navigation_bar = [
                     ('/', 'topic', '社区'),
                     ('/members', 'members', '成员'),
-                    ('/static/pages/timeline/index.html', 'timeline', '大事记'),
-                    ('/static/pages/nav/index.html', 'nav', '导航'),
+                    <!--('/static/pages/timeline/index.html', 'timeline', '大事记'),-->
+                    <!--('/static/pages/nav/index.html', 'nav', '导航'),-->
                 ] -%}
 
                 {% set active_page = active_page|default('index') -%}
                 {% endcomment %}
 
-                {% if active_page %}
-                <ul class="nav">
-                    {% for href, id, caption in navigation_bar %}
-                        <li{% ifequal id active_page %} class="active"{% endifequal %}>
-                            <a href="{{ href|escape }}">{{ caption|escape }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-                {% else %}
-                <ul class="nav">
-                    {% for href, id, caption in navigation_bar %}
-                    <li{% ifequal id 'index' %} class="active"{% endifequal %}>
-                    <a href="{{ href|escape }}">{{ caption|escape }}</a>
-                </li>
-                {% endfor %}
-                </ul>
-                {% endif %}
+                <!--{% if active_page %}-->
+                <!--<ul class="nav">-->
+                    <!--{% for href, id, caption in navigation_bar %}-->
+                        <!--<li{% ifequal id active_page %} class="active"{% endifequal %}>-->
+                            <!--<a href="{{ href|escape }}">{{ caption|escape }}</a>-->
+                        <!--</li>-->
+                    <!--{% endfor %}-->
+                <!--</ul>-->
+                <!--{% else %}-->
+                <!--<ul class="nav">-->
+                    <!--{% for href, id, caption in navigation_bar %}-->
+                    <!--<li{% ifequal id 'index' %} class="active"{% endifequal %}>-->
+                    <!--<a href="{{ href|escape }}">{{ caption|escape }}</a>-->
+                <!--</li>-->
+                <!--{% endfor %}-->
+                <!--</ul>-->
+                <!--{% endif %}-->
             </div>
             <!--/.nav-collapse -->
             <form class="navbar-search pull-left J_search">

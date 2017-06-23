@@ -15,7 +15,7 @@ DATABASES = {
         'NAME': 'forum',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': '1',
         'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '3306',                      # Set to empty string for default.
     }
@@ -33,7 +33,8 @@ TIME_ZONE = 'Asia/Shanghai'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'zh-CN'
+#LANGUAGE_CODE = 'zh-CN'
+LANGUAGE_CODE = 'zh-Hans'
 
 SITE_ID = 1
 
@@ -61,7 +62,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = '/Users/wangziqiang/zhongguoai/forum/static/'
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -186,11 +187,11 @@ AUTHENTICATION_BACKENDS = ('forum.backends.EmailAuthBackend',)
 LOGIN_URL = '/login/'
 
 # 发送邮件设置
-EMAIL_HOST = 'smtp.qq.com'
+EMAIL_HOST = 'smtp.163.com'
 EMAIL_PORT = 25
-EMAIL_HOST_USER= '*****'
-EMAIL_HOST_PASSWORD= '*****'
-DEFAULT_FROM_EMAIL = '*****@qq.com'
+EMAIL_HOST_USER= 'zhongguoai163@163.com'
+EMAIL_HOST_PASSWORD= 'Wzq111111'
+DEFAULT_FROM_EMAIL = 'zhongguoai163@163.com'
 
 # 注册用户保留关键字，非Django设置
 RESERVED = ["user", "topic", "home", "setting", "forgot", "login", "logout", "register", "admin"]
