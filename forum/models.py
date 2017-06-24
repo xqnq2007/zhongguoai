@@ -74,7 +74,7 @@ class TopicManager(models.Manager):
         return query, page
 
     def get_user_all_replied_topics(self, uid, num = 36, current_page = 1):
-        pass # F2E好像写的不对，留着以后有用再说
+        pass # zhongguo.ai好像写的不对，留着以后有用再说
 
     def get_topic_by_topic_id(self, topic_id):
         query = self.get_queryset().select_related('node', 'author', 'last_replied_by').get(pk=topic_id)

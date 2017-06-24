@@ -162,7 +162,7 @@ class SettingForm(forms.Form):
     location = forms.CharField(required=False)
     website = forms.URLField(required=False,
         error_messages={
-            'invalid': u'请填写合法的URL地址（如：http://f2e.im）',
+            'invalid': u'请填写合法的URL地址（如：http://zhongguo.ai）',
         })
     company = forms.CharField(required=False)
     github = forms.CharField(required=False)

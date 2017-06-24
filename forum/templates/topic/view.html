@@ -2,7 +2,7 @@
 {% load forum_extras %}
 
 {% block title %}
-    {{ topic.title }} - F2E
+    {{ topic.title }} - 智能中国
 {% endblock %}
 
 {% block stylesheet %}
@@ -135,7 +135,7 @@
             <a href="/unfavorite/?topic_id={{ topic.id }}" class="J_topicFavorite" data-type="unfavorite">取消收藏</a>
             {% endif %}
             <a href="#" onclick="window.open('https://twitter.com/intent/tweet?hashtags={{ topic.node.slug }}&text={{ topic.title }}&url=http://{{ request.get_host }}{{ request.get_full_path }}');">Tweet</a>
-            <a href="#" onclick="window.open('http://service.weibo.com/share/share.php?url=http://{{ request.get_host }}{{ request.get_full_path }}&title=F2E%20-%20{{ topic.title }}', '_blank', 'width=550, height=370');">新浪微博</a>
+            <a href="#" onclick="window.open('http://service.weibo.com/share/share.php?url=http://{{ request.get_host }}{{ request.get_full_path }}&title=智能中国%20-%20{{ topic.title }}', '_blank', 'width=550, height=370');">新浪微博</a>
             <a href="/vote/?topic_id={{ topic.id }}" class="J_topicVote">喜欢</a>
             {% if user.is_authenticated and user.id == topic.author.id %}
                 <a href="/t/edit/{{ topic.id }}/" class="fr">编辑主题</a>
