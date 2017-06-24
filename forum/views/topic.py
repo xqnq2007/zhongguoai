@@ -184,11 +184,12 @@ def post_create(request, slug=None):
         last_created = None
 
     if last_created: # 如果用户最后一篇的标题内容与提交的相同
-        last_created_fingerprint = hashlib.sha1(last_created.title + \
-            last_created.content + str(last_created.node_id)).hexdigest()
-        new_created_fingerprint = hashlib.sha1(form.cleaned_data.get('title') + \
-            form.cleaned_data.get('content') + str(node.id)).hexdigest()
-
+        #last_created_fingerprint = hashlib.sha1(last_created.title + \
+         #   last_created.content + str(last_created.node_id)).hexdigest()
+        last_created_fingerprint = last_created.title + last_created.content+str(last_created.node_id)
+        #new_created_fingerprint = hashlib.sha1(form.cleaned_data.get('title') + \
+        #    form.cleaned_data.get('content') + str(node.id)).hexdigest()
+        new_created_fingerprint = form.cleaned_data.get('title') + form.cleaned_data.get('content') + str(node.id)
         if last_created_fingerprint == new_created_fingerprint:
             errors = {'duplicated_topic': [u'帖子重复提交']}
             return get_create(request, slug=slug, errors=errors)
